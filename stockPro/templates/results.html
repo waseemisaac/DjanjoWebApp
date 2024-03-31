@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <head>
+    <title>Stock Data Fetcher</title>
+    {% load static %}
+     <link rel="stylesheet" href="{% static 'style.css' %}" /> 
+   
+</head>
+<body>
+  <div class="container">
+    <h1>Stock Data for {{ ticker }}</h1>
+    {% if graphic %}
+        <img src="data:image/png;base64, {{ graphic }}" alt="Stock Price Chart" class="img-fluid">
+    {% else %}
+        <p>No data available for this request.</p>
+    {% endif %}
+  </div>
+
+
+</body>
+</html>
